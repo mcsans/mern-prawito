@@ -1,0 +1,129 @@
+--------------------------------------------------
+TAHAPAN BACKEND
+--------------------------------------------------
+1. Planning API
+2. Membuat dummy API (postman)
+
+
+--------------------------------------------------
+TAHAPAN MEMBUAT API
+--------------------------------------------------
+1. Buat controller
+2. Buat routes
+3. Panggil routes di index.js (route group)
+
+
+--------------------------------------------------
+TAHAPAN Blog Post
+--------------------------------------------------
+*. Buat schema models/blog.js
+*. Panggil routes di index.js (route group)
+
+1. Buat routes/blog.js
+2. Buat controllers/blog.js 
+
+
+--------------------------------------------------
+17. MEMBUAT PROJECT BARU NODE JS
+--------------------------------------------------
+$ npm init
+
+- package name: (mern-api) [enter]
+- version: (1.0.0) [enter]
+- description: REST API Node JS (MERN Stack) [enter]
+- entry point: (index.js) [enter]
+- test command: [enter]
+- git repository: [enter]
+- keyword: [enter]
+- author: Moch Ihsan Saepulloh [enter]
+- license: (ISC) [enter]
+- Is this OK? (yes) [enter]
+
+
+--------------------------------------------------
+18. MEMBUAT SERVER NODEJS MENGGUNAKAN EXPRESS JS
+--------------------------------------------------
+$ npm install --save express@4.17.1
+$ npm install nodemon
+$ npm install body-parser@1.19.0
+$ npm install --save express-validator@6.4.0
+$ npm install mongoose@5.9.19
+$ npm install --save multer@1.4.2
+
+- membuat index.js
+- menambahkan "start": "nodemon index.js", di package.json
+
+
+--------------------------------------------------
+19. Restructure Projects NodeJS/ExpressJS
+--------------------------------------------------
+- src : didalamnya :
+        - routes
+        - controllers
+        - model
+
+
+--------------------------------------------------
+25. Standar API & RESPONSE
+--------------------------------------------------
+Standar API
+
+[METHOD] : {root}/{versi}/{grouping}/{endpoint}
+SAMPLE:
+[POST] : http://mern-api.kabayancoding.com/v1/auth/login
+
+Standar Status Response
+
+200 - OK                     --> Call Api Success
+201 - CREATED                --> Post Success
+400 - BAD REQUEST            --> Error on Client Side (Bisa input yg salah dll).
+401 - UNAUTHORIZED           --> User not authorized to the request.
+403 - FORBIDDEN              --> User not allowed to access.
+404 - NOT FOUND              --> Request endpoint not found.
+500 - INTERNAL SERVER ERROR  --> Error on Server Side
+502 - BAD GATEWAY            --> Invalid Response From Another Request
+
+GROUP: Authentication
+
+[1] - Register
+{root}/{versi}/auth/register
+
+[2] - Login
+{root}/{versi}/auth/login
+
+GROUP: Blog
+[1] - Create Blog Post
+[2] - Get Blog Post
+[3] - Update Blog Post
+[4] - Delete Blog Post
+
+
+--------------------------------------------------
+28. EXPRESS VALIDATION
+--------------------------------------------------
+Template dinamis error response :
+- membuat di index.js (dinamis error response)
+- membuat throw isEmpty di controllers
+- memberi validasi di routes
+
+Re-usesabble:
+- memberi validasi di routes
+
+
+--------------------------------------------------
+30. MONGODB ATLAS
+--------------------------------------------------
+username : mcsans
+password : Pzrgtof8hxKwBEhF
+
+1. open mongodb.com -> new project -> setup dbaccess dan network access -> new database -> connect -> application (nodejs) -> copy link
+   ex. : (mongodb+srv://mcsans:<password>@cluster0.icjaj7n.mongodb.net/<dbname>?retryWrites=true&w=majority)
+2. open term -> $ npm i mongoose@5.9.19
+3. membuat connection di index.js
+4. membuat schema (mirip migration) -> ex. src/models/blog.js
+
+
+--------------------------------------------------
+34. UPLOAD IMAGE
+--------------------------------------------------
+1. open term -> $ npm install --save multer@1.4.2

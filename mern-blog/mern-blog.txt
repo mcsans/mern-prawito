@@ -1,0 +1,50 @@
+--------------------------------------------------
+TIPS
+--------------------------------------------------
+- shortcut -> rafce
+- tempat download image -> unsplash
+
+
+--------------------------------------------------
+TAHAPAN MEMBUAT PAGES
+--------------------------------------------------
+- membuat folder dan app index di pages
+- export di index pages
+
+
+--------------------------------------------------
+INSTALLING DEPENDENCIES FRONTEND
+--------------------------------------------------
+$ npx create-react-app <project_name>
+$ npm i react-router-dom@5.2.0
+$ npm i axios@0.19.2
+$ npm i redux@4.0.5
+$ npm i react-redux@7.2.0
+
+--------------------------------------------------
+13. Routing dengan UseHistory
+--------------------------------------------------
+
+
+--------------------------------------------------
+41. AXIOS
+--------------------------------------------------
+$ npm i axios@0.19.2
+
+
+--------------------------------------------------
+41. REDUX
+--------------------------------------------------
+- on src/config create: redux/store.js
+- on src/config/index.js : import store
+- on src/pages/App.js : bungkus Routes dengan Provider
+
+NEW GLOBAL STATE STRUCTURE
+1. on src/config/reducer : buat reducer dengan nama file sesuai kebutuhan.
+2. on src/config/reducer/reducer.js : import reducer yg tadi dibuat.
+
+
+--------------------------------------------------
+47. REDUX THUNK
+--------------------------------------------------
+$ npm i redux-thunk@2.3.0
